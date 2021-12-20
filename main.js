@@ -27,7 +27,7 @@ function createSessions(id = createId()) {
   }
 
   const session = new Session(id);
-  console.log("Creating session", session);
+  // console.log("Creating session", session);
   sessions.set(id, session);
 
   return session;
@@ -53,13 +53,13 @@ function broadcastSession(session) {
 }
 
 server.on("connection", (conn) => {
-  console.log("Connection established");
+  // console.log("Connection established");
   const client = createClient(conn);
 
   conn.on("message", (data) => {
     const receivedData = JSON.parse(data);
 
-    console.log(receivedData);
+    // console.log(receivedData);
 
     if (receivedData.type === "create-session") {
       const session = createSessions();
