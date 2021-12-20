@@ -1,12 +1,16 @@
 {
-    "name": "nes-tetris-canvas",
-    "version": "1.0.0",
-    "description": "",
-    "main": "main.js",
-    "scripts": {
-        "start": "node main.js"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC"
+  "name": "nes-tetris-canvas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "heroku-postbuild": "npm i",
+    "start": "node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^8.4.0"
+  }
 }
